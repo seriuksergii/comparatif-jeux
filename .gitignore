@@ -7,10 +7,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-
-
-*.local
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -21,3 +17,7 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Не ігнорувати готовий build/dist
+!dist/
+!build/
