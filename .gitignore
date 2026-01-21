@@ -20,6 +20,4 @@ lerna-debug.log*
 
 # Не ігнорувати готовий build/dist
 !dist/
-!dist/**
 !build/
-!build/**
