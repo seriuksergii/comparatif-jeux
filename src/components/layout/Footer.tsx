@@ -18,13 +18,13 @@ const Footer = () => {
   ];
 
   const organizationLogos = [
-    { src: logo1, alt: "GamCare" },
-    { src: logo2, alt: "ANJ" },
-    { src: logo3, alt: "Joueurs Info Service" },
-    { src: logo4, alt: "ADICTEL" },
-    { src: logo5, alt: "BeGambleAware" },
-    { src: logo6, alt: "Médiateur des jeux" },
-    { src: logo7, alt: "Gaming Therapy" },
+    { src: logo1, alt: "GamCare", url: "https://www.gamcare.org.uk/" },
+    { src: logo2, alt: "ANJ", url: "https://www.anj.fr/" },
+    { src: logo3, alt: "Joueurs Info Service", url: "https://www.joueurs-info-service.fr/" },
+    { src: logo4, alt: "ADICTEL", url: "https://www.adictel.org/" },
+    { src: logo5, alt: "BeGambleAware", url: "https://www.begambleaware.org/" },
+    { src: logo6, alt: "Médiateur des jeux", url: "https://www.mediateur-des-jeux.fr/" },
+    { src: logo7, alt: "Gaming Therapy", url: "https://www.gamingtherapy.org/" },
   ];
 
   return (
@@ -88,7 +88,13 @@ const Footer = () => {
             {/* Top row: 4 logos */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center">
               {organizationLogos.slice(0, 4).map((logo, index) => (
-                <div key={index} className="flex items-center justify-center h-16 w-full">
+                <a
+                  key={index}
+                  href={logo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center h-16 w-full"
+                >
                   <img
                     src={logo.src}
                     alt={logo.alt}
@@ -96,13 +102,19 @@ const Footer = () => {
                     loading="lazy"
                     decoding="async"
                   />
-                </div>
+                </a>
               ))}
             </div>
 
             <div className="grid grid-cols-3 gap-6 items-center justify-items-center max-w-2xl mx-auto">
               {organizationLogos.slice(4, 7).map((logo, index) => (
-                <div key={index + 4} className="flex items-center justify-center h-16 w-full">
+                <a
+                  key={index + 4}
+                  href={logo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center h-16 w-full"
+                >
                   <img
                     src={logo.src}
                     alt={logo.alt}
@@ -110,7 +122,7 @@ const Footer = () => {
                     loading="lazy"
                     decoding="async"
                   />
-                </div>
+                </a>
               ))}
             </div>
           </div>

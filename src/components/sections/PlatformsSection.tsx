@@ -13,6 +13,7 @@ interface Platform {
   features: string[];
   sports: string[];
   badge?: string;
+  url: string;
 }
 
 const platforms: Platform[] = [
@@ -25,6 +26,7 @@ const platforms: Platform[] = [
     features: ["App mobile intuitive", "Retrait rapide 24h", "Service client 24/7", "Streaming live"],
     sports: ["Football", "Tennis", "Basketball", "Rugby"],
     badge: "Choix #1",
+    url: "https://www.netbet.com",
   },
   {
     name: "SportWin France",
@@ -35,6 +37,7 @@ const platforms: Platform[] = [
     features: ["Paris en direct", "Cotes boostées", "Promotions hebdo", "Cash out"],
     sports: ["Football", "Tennis", "Hockey", "MMA"],
     badge: "Meilleur Live",
+    url: "https://www.bwin.com",
   },
   {
     name: "PariFoot Expert",
@@ -45,6 +48,7 @@ const platforms: Platform[] = [
     features: ["Stats avancées", "Pronostics experts", "Communauté active", "Multiples bonus"],
     sports: ["Football", "Cyclisme", "Tennis", "E-sport"],
     badge: "Bonus Top",
+    url: "https://www.unibet.com",
   },
 ];
 
@@ -144,13 +148,20 @@ const PlatformsSection = () => {
               </div>
 
               {/* CTA */}
-              <Button
-                variant={index === 0 ? "hero" : "outline"}
-                className="w-full"
+              <a
+                href={platform.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
               >
-                Visiter le site
-                <ExternalLink className="w-4 h-4" />
-              </Button>
+                <Button
+                  variant={index === 0 ? "hero" : "outline"}
+                  className="w-full"
+                >
+                  Visiter le site
+                  <ExternalLink className="w-4 h-4" />
+                </Button>
+              </a>
             </article>
           ))}
         </div>
